@@ -27,3 +27,10 @@ adb shell settings put secure enabled_accessibility_services com.google.android.
 # Stop a11y service:
 adb shell am force-stop com.google.android.marvin.talkback
 ```
+- Dark mode:
+``` bash
+# Enable:
+adb shell "cmd uimode night yes"
+# Disable:
+adb shell "cmd uimode night no"
+```
