@@ -34,3 +34,8 @@ adb shell "cmd uimode night yes"
 # Disable:
 adb shell "cmd uimode night no"
 ```
+- Touch on screen position
+``` bash
+# Touch on specific screen position:
+adb shell input touchscreen tap 700 1453
+```
