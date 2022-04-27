@@ -38,4 +38,7 @@ adb shell "cmd uimode night no"
 ``` bash
 # Touch on specific screen position:
 adb shell input touchscreen tap 700 1453
+# Get touchscreen x and y position of areas you tap (0035 = x 0036 = y)
+# returns a hex value than when converted to decimal, shows touched coordinates
+adb shell getevent | grep -E '0035|0036'
 ```
