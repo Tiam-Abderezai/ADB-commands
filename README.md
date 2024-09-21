@@ -3,11 +3,36 @@
 ``` bash
 # List devices:
 adb devices
+# Get ADB Root permission
+adb root
+# Get ADB Version
+adb --version
 # Tap on EditText:
 adb shell input keyevent KEYCODE_TAB
 # Input text into EditText:
 adb shell input text <sometext>
+# Uninstall an app
+adb uninstall --user 0 com.example.app
+# Kill an app
+adb shell am force-stop com.example.app
+# Add/Remove second screen
+adb emu multidisplay add 1 2720 720 160 0
+adb emu multidisplay del 1
+# Turn on/off Nightmode
+adb shell "cmd uimode night yes"
+adb shell "cmd uimode night no"
+# Show Device Display
+adb shell dumpsys window displays
 ```
+- Manipulate Android Components
+``` bash
+# Start an particular Activity:
+adb shell am start -n com.example.app/directories.particular.ParticularActivity
+# Start a particular BroadcastReceiver
+adb shell am broadcast --user 0 -n com.example.app/com.example.app.ParticularBroadcastReceiver -a com.example.app.services.SomeService.SOME_SCREEN
+```
+
+
 - Record emulator:
 ``` bash
 # Record:
